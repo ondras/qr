@@ -13,7 +13,7 @@ async function handler(req: Request) {
 	let url = new URL("https://api.qrserver.com/v1/create-qr-code/");
 	let sp = url.searchParams;
 	sp.set("data", referer);
-	sp.set("format", "png");
+	sp.set("format", "svg");
 	sp.set("qzone", "1");
 	return fetch(url.toString());
 }
